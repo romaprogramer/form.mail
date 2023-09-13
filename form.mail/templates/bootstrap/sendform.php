@@ -18,7 +18,7 @@
               "Состав заявки:"."\n".
               $Table."\n".
               "Комментарий:".$_POST['comment'];
-              
+            
     $Result = mail($Mail, $Subject, $Message);
     if($Result) { 
         echo "Письмо отправлено";

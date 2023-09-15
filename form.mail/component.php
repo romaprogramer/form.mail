@@ -18,7 +18,8 @@
         $Arr["ACTIVE"] = "Y";
         $Arr["EVENT_NAME"] = "Test mail" ;
         $Arr["LID"] = "s1";
-        $Arr["MAIL_TO"] = "romaprogramer@gmail.com"; 
+        $Arr["MAIL_TO"] = $arResult['Mail']; 
+        $Arr["MAIL_FROM"] = "info@bitrixcms.agiletelebot.ru";
         $Arr["SUBJECT"] = "Проверка почты";
         $Arr["BODY_TYPE"] = "text";
         $Arr["MESSAGE"] = "\nПроверка почты\n\nПервое сообщение";

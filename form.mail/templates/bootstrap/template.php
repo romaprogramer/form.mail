@@ -10,7 +10,7 @@
 
 <div class="container">
   <!--  <form action="bitrix/components/market/form.mail/templates/bootstrap/sendform.php" method="post">-->
-    <form  method="post">
+    <form  method="post" enctype="multipart/form-data">
         <div class="row my-4">
             <div class="col-md-5">
                 <label for="title" class="form-label h6">Заголовок заявки</label>
@@ -101,7 +101,7 @@
             </div>
         <div class="row my-4">
              <div id="groups">
-                 <input type="file" name="" value="">
+                 <input type="file" name="file">
             </div>
         </div>
         <div class="row my-2">
@@ -132,4 +132,3 @@
         </div>
     </div>     
 <?}?>  
-   

@@ -51,7 +51,7 @@
             <div class="col-md-3">
                 <label class="form-label h6">Склад поставки</label>
                 <select class="form-select form-select-sm" name="sklad">
-                    <option selected>(выберите склад поставки)</option>
+                    <option value="" selected>(выберите склад поставки)</option>
                 </select>
             </div>
         </div>

@@ -29,34 +29,34 @@
         $arResult['IdMl'] = $IdMl;
         */
         
-        $Message = "\nЗаполненная заявка\n\n";
+        $Message = "\nЗаполненая заявка\n\n";
         foreach($_POST as $Key => $Value){
             switch($Key){
                 case "title":
-                    $Row = "Заголовок: ".$Value."\n\n";
+                    $Title = "Заголовок: ".$Value."\n\n";
                 break;
                 case "category":
-                    $Row = "Категория: ".$Value."\n\n";
+                    $Category = "Категория: ".$Value."\n\n";
                 break;
                 case "type":
-                    $Row = "Тип: ".$Value."\n\n";
+                    $Type = "Тип: ".$Value."\n\n";
                 break;
                 case "sklad":
-                    $Row = "Склад: ".$Value."\n\n";
+                    $Sklad = "Склад: ".$Value."\n\n";
                 break;
                 case "comment":
                     $Comment = "Комментарий: ".$Value."\n\n";
                 break;
             }
-            $Message = $Message.$Row;
+            
         }
         
         $Row = "\nСостав заявки\n\nБренд\tПродукт\tКоличество\tФасовка\tКлиент\n";
             foreach($_POST['brand'] as $Key=>$Value){
-                $Row = $Row.$_POST['brand'][$Key]." ".$_POST['product'][$Key]." ".$_POST['number'][$Key]." ".$_POST['fasovka'][$Key]." ".$_POST['client'][$Key]."\n";     
+                $Row = $Row.$_POST['brand'][$Key]."\t".$_POST['product'][$Key]."\t".$_POST['number'][$Key]."\t".$_POST['fasovka'][$Key]."\t".$_POST['client'][$Key]."\n";     
                 }
         $Sostav = $Row."\n";
-        $Message = $Message.$Sostav.$Comment;
+        $Message = $Message.$Title.$Category.$Type.$Sklad.$Sostav.$Comment;
         
         if(isset($_FILES['file']) && $_FILES['file']['tmp_name'] !==""){
             $NewPath = $_SERVER['DOCUMENT_ROOT']."/uploads/".$_FILES['file']['name'];

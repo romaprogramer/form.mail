@@ -95,7 +95,7 @@
                     </div>
                     <div class="col mx-2">
                         <button type"button"  onclick="addGroup()" class="btn btn-primary p-1" >+</button>
-                        <button type"button"  onclick="removeGroup()" class="btn btn-primary px-2 py-1">-</button>
+                        <button type"button" id="1" onclick="removeGroup()" class="btn btn-primary px-2 py-1">-</button>
                     </div>
                 </div>
             </div>

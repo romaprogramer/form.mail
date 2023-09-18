@@ -1,5 +1,6 @@
-# form.mail
+# form.mail 
 tested component for Bitrix
+version 1.0
 
 В .zip-файле файлы компонента. 
 Там названия для файлов .parameters.php и .description.php через точку, как нужно. 
@@ -17,10 +18,10 @@ tested component for Bitrix
 
 15.09.2023 19:06 - Обновлен файл component.php:
 - Исправлена ошибка (в плане логики работы контроллера) в получении адреса отправки -
-теперь значение параметра массива для почтового шаблона $Arr["MAIL_TO"] берется 
-из параметра массива контролера компонента $arResult['Mail'].
+теперь значение параметра массива для почтового шаблона <code>$Arr["MAIL_TO"]</code> берется 
+из параметра массива контролера компонента <code>$arResult['Mail']</code>.
 - добавлен параметр MAIL_FROM со значением в массив для почтового шаблона виде строки:
-  $Arr["MAIL_FROM"] = "info@bitrixcms.agiletelebot.ru";
+  <code>$Arr["MAIL_FROM"] = "info@bitrixcms.agiletelebot.ru"</code>;
 
 16.09.2023 14:50 - Обновлены файлы component.php и template.php:
 - Добавлен код для обработки загруженного прикрепленного файла в файл контроллера
